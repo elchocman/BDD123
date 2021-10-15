@@ -9,8 +9,8 @@
 
  	$query = "SELECT pelicula.titulo 
       FROM pelicula, genero, subgenero
-      WHERE UPPER(pelicula.genero) LIKE UPPER('%$$genero%')
-      OR UPPER(subgenero.nombre) LIKE UPPER('%$$genero%')
+      WHERE UPPER(pelicula.genero) LIKE UPPER('%$genero%')
+      OR UPPER(subgenero.nombre) LIKE UPPER('%$genero%')
       AND subgenero.id_genero = genero.id_genero
       AND genero.nombre = pelicula.genero";
 	$result = $db -> prepare($query);

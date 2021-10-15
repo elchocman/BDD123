@@ -12,7 +12,7 @@
       WHERE UPPER(pelicula.genero) LIKE UPPER('%$genero%')
       OR UPPER(subgenero.nombre) LIKE UPPER('%$genero%')
       AND subgenero.id_genero = genero.id_genero
-      AND genero.nombre = pelicula.genero";
+      AND genero.nombre = pelicula.genero;";
 	$result = $db -> prepare($query);
 	$result -> execute();
 	$resultado = $result -> fetchAll();

@@ -7,7 +7,6 @@
   <br>
 
   <h3 align="center"> ¿Quieres ver todas las peliculas junto con sus proveedores, siempre y cuando el proveedor las ofrezca de manera gratuita?</h3>
-  Titulo:
   <form align="center" action="consultas/consulta1.php" method="post">
     <input type="submit" value="Buscar">
   </form>
@@ -61,6 +60,15 @@
     Username:
     <input type="text" name="username">
     <br/><br/>
+    <input type="submit" value="Buscar">
+  </form>
+  
+  <br>
+  <br>
+  <br>
+
+  <h3 align="center"> ¿Quieres ver la suma de dinero gastada por cada usuario en peliculas?</h3>
+  <form align="center" action="consultas/consulta7.php" method="post">
     <input type="submit" value="Buscar">
   </form>
   

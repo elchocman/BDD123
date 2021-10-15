@@ -5,9 +5,13 @@
   #Llama a conexión, crea el objeto PDO y obtiene la variable $db
   require("../config/conexion.php");
 
-  $username = $_POST["username"];
+  $genero = $_POST["genero"];
 
- 	$query = "SELECT  pelicula.titulo, proveedor.nombre FROM  pelicula, proveedor, proveedor_peliculas, suscripciones, usuario WHERE  usuario.username = $username AND  suscripciones.id_usuario = usuario.id AND  suscripciones.id_proveedor = proveedor.id AND  proveedor_peliculas.id_proveedor = proveedor.id AND  proveedor_peliculas.id_pelicula = pelicula.id;";
+ 	$query = "SELECT pelicula.titulo FROM pelicula, genero, subgenero
+      WHERE pelicula.genero = $genero
+      OR subgenero.nombre = $genero
+      AND subgenero.id_genero = genero.id_genero
+      AND genero.nombre = pelicula.genero";
 	$result = $db -> prepare($query);
 	$result -> execute();
 	$resultado = $result -> fetchAll();

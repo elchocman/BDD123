@@ -16,11 +16,37 @@
   <br>
   <br>
 
+  <h3 align="center"> ¿Quieres ver las series que tengan al menos cierto numero de temporadas? Insertar numero de temporadas deseado</h3>
+ 
+  <form align="center" action="consultas/consulta2.php" method="post">
+    Numero:
+    <input type="text" name="Numero">
+    <br/><br/>
+    <input type="submit" value="Buscar"> 
+  </form>
+  
+  <br>
+  <br>
+  <br>
+
   <h3 align="center"> ¿Todas las peliculas/series con su proveedor? Insertar titulo de la pelicula/serie</h3>
 
   <form align="center" action="consultas/consulta3.php" method="post">
     Titulo:
     <input type="text" name="titulo">
+    <br/><br/>
+    <input type="submit" value="Buscar">
+  </form>
+  
+  <br>
+  <br>
+  <br>
+  
+  <h3 align="center"> ¿Todas las peliculas que pertenecen al genero? Inserte genero</h3>
+
+  <form align="center" action="consultas/consulta4.php" method="post">
+    genero:
+    <input type="text" name="genero">
     <br/><br/>
     <input type="submit" value="Buscar">
   </form>
@@ -42,18 +68,7 @@
   <br>
   <br>
 
-  <h3 align="center"> ¿Todas las peliculas que pertenecen al genero? Inserte genero</h3>
-
-  <form align="center" action="consultas/consulta5.php" method="post">
-    genero:
-    <input type="text" name="genero">
-    <br/><br/>
-    <input type="submit" value="Buscar">
-  </form>
   
-  <br>
-  <br>
-  <br>
 
   <br>
 </body>

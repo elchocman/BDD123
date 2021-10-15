@@ -5,9 +5,11 @@
   #Llama a conexión, crea el objeto PDO y obtiene la variable $db
   require("../config/conexion.php");
 
-  $username = $_POST["username"];
+  $n = $_POST["n"];
 
- 	$query = "SELECT  pelicula.titulo, proveedor.nombre FROM  pelicula, proveedor, proveedor_peliculas, suscripciones, usuario WHERE  usuario.username = $username AND  suscripciones.id_usuario = usuario.id AND  suscripciones.id_proveedor = proveedor.id AND  proveedor_peliculas.id_proveedor = proveedor.id AND  proveedor_peliculas.id_pelicula = pelicula.id;";
+ 	$query = "SELECT serie.titulo FROM serie, temporada
+      WHERE temporada.numero >= $n
+      AND temporada.id_serie = serie.id_serie;";
 	$result = $db -> prepare($query);
 	$result -> execute();
 	$resultado = $result -> fetchAll();

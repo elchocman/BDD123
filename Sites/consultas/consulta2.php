@@ -7,7 +7,8 @@
 
   $n = $_POST["n"];
 
- 	$query = "SELECT serie.titulo FROM serie, temporada
+ 	$query = "SELECT serie.titulo 
+      FROM serie, temporada
       WHERE temporada.numero >= $n
       AND temporada.id_serie = serie.id_serie;";
 	$result = $db -> prepare($query);

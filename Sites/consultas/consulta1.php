@@ -6,7 +6,11 @@
   require("../config/conexion.php");
 
   #Se construye la consulta como un string
- 	$query = "SELECT pelicula.titulo, proveedor.nombre FROM  pelicula, proveedor, proveedor_peliculas WHERE  proveedor.costo = 0 AND  proveedor_peliculas.id_proveedor = proveedor.id AND  proveedor_peliculas.id_pelicula = pelicula.id;";
+ 	$query = "SELECT pelicula.titulo, proveedor.nombre 
+   FROM  pelicula, proveedor, proveedor_peliculas 
+   WHERE  proveedor.costo = 0 
+   AND  proveedor_peliculas.id_proveedor = proveedor.id 
+   AND  proveedor_peliculas.id_pelicula = pelicula.id;";
 
   #Se prepara y ejecuta la consulta. Se obtienen TODOS los resultados
 	$result = $db -> prepare($query);
